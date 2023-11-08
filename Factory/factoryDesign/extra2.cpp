@@ -129,9 +129,9 @@ int main()
 
     // no need to re-create a new object of Client class 
     // for different type of Wheeler
-    ClientFactory* client = new ClientFactory();
-    client->buildVehicle(DHO_ThreeWheeler);
-    pVehicle = client->getVehicle();
+    ClientFactory client = new ClientFactory();
+    client.buildVehicle(DHO_ThreeWheeler);
+    Vehicle* pVehicle = client.getVehicle();
     pVehicle->printVehicle();
     return 0;
 }
